@@ -3,6 +3,7 @@
 var EndDiv = {
 	
 	initialize: function(){
+		// EndDiv.errorLog();
 		EndDiv.parse();
 	},
 
@@ -18,14 +19,17 @@ var EndDiv = {
 
 	findVariables: function(parsedCode){
 		window.variableHash = {}
-		$.each(parsedCode.match(/`(.+?)`/g),function(ind,declaration){
+		var variables = parsedCode.match(/`(.+?)`/g);
+		if(variables){
+			$.each(parsedCode.match(/`(.+?)`/g),function(ind,declaration){
 
-			// Match array returns as [original,variable,value]
-			var seperate = declaration.match(RegExp(/`(.+?)=(.+?)`/));
-			// Remove the existance of this variable from the document
-			parsedCode = parsedCode.replace(seperate[0],'');
-			variableHash[seperate[1].trim()] = seperate[2].trim();
-		});
+				// Match array returns as [original,variable,value]
+				var seperate = declaration.match(RegExp(/`(.+?)=(.+?)`/));
+				// Remove the existance of this variable from the document
+				parsedCode = parsedCode.replace(seperate[0],'');
+				variableHash[seperate[1].trim()] = seperate[2].trim();
+			});
+		}
 		return parsedCode;
 	},
 
@@ -36,12 +40,12 @@ var EndDiv = {
 		// output is the key, input is the value in regex format
 		characterMap = {
 			// gets all set attributes
-			'' : /[(](.+?)[\/]/g,
+			'' : /[\/](.+?)[\/]/g,
 			// Add character clauses below
 			// 
 			// Div clauses must be last as it is the default
-			'<div>'	  :    /\(/g,
-			'</div>'	:    /\)/g
+			'<div>'	  :    /\[/g,
+			'</div>'	:    /\]/g
 		}
 
 		$.each(characterMap, function(replaceKey,findKey){
@@ -56,7 +60,7 @@ var EndDiv = {
 	findAndReplaceVariables: function(parsedCode){
 		$.each(variableHash, function(variable,value){
 			console.log(new RegExp('`' + variable));
-			parsedCode = parsedCode.replace(new RegExp('`' + variable),value);
+			parsedCode = parsedCode.replace(new RegExp('`' + variable,'g'),value);
 		})
 		return parsedCode;
 	}
