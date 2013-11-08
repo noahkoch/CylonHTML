@@ -19,14 +19,15 @@ This:
 ````
 
 Becomes
-
+````
 [stuff here]
-
+````
 to define specific attributes, you can user
-
+````
 [span class="stuff"/stuff here]
-
+````
 which compiles to:
 
+````html
 <span class="stuff">stuff here</span>
-
+````
