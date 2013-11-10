@@ -2,19 +2,23 @@
 
 var EndDiv = {
 	
-	initialize: function(){
-		// EndDiv.errorLog();
-		EndDiv.parse();
+	defaults: {
+		tag : 'div'
 	},
 
-	parse: function(){
-		var nonParsedCode = $('body').html();
+	initialize: function(el){
+		// EndDiv.errorLog();
+		EndDiv.parse(el);
+	},
+
+	parse: function(el){
+		var nonParsedCode = el.html();
 
 		var parsedCode = EndDiv.addHTMLAttributes(nonParsedCode);
 		parsedCode = EndDiv.findVariables(parsedCode);	
 		parsedCode = EndDiv.findAndReplaceVariables(parsedCode);
 
-		$('body').html(parsedCode);
+		el.html(parsedCode);
 	},
 
 	findVariables: function(parsedCode){
@@ -40,16 +44,19 @@ var EndDiv = {
 		// output is the key, input is the value in regex format
 		characterMap = {
 			// gets all set attributes
-			'' : /[\/](.+?)[\/]/g,
+			'<$1>' : /\[\/(.+?)[\/]/g,
 			// Add character clauses below
-			// 
+				// Set class and id attributes
+				'style = "$1"': /s[.]([a-zA-Z0-9:;_\-]+)/g,
+				'class = "$1"': /[.]([a-zA-Z0-9:;_\-]+)/g,
+				'id = "$1"'		: /[#]([a-zA-Z0-9:;_\-]+)/g,
 			// Div clauses must be last as it is the default
 			'<div>'	  :    /\[/g,
 			'</div>'	:    /\]/g
 		}
 
 		$.each(characterMap, function(replaceKey,findKey){
-			parsedCode = (replaceKey == '') ? parsedCode.replace(findKey,'<$1>') : parsedCode.replace(findKey,replaceKey);
+			parsedCode = parsedCode.replace(findKey,replaceKey);
 		})
 		
 		console.log('non browser interpreted code \n' + parsedCode);
@@ -59,7 +66,6 @@ var EndDiv = {
 
 	findAndReplaceVariables: function(parsedCode){
 		$.each(variableHash, function(variable,value){
-			console.log(new RegExp('`' + variable));
 			parsedCode = parsedCode.replace(new RegExp('`' + variable,'g'),value);
 		})
 		return parsedCode;
@@ -68,5 +74,5 @@ var EndDiv = {
 };
 
 $(document).ready(function(){
-	EndDiv.initialize();
+	EndDiv.initialize($('body'));
 })
