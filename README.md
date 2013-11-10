@@ -24,10 +24,34 @@ Becomes
 ````
 to define specific attributes, you can user
 ````
-[span class="stuff"/stuff here]
+[/span class="stuff"/stuff here]
 ````
 which compiles to:
 
 ````html
 <span class="stuff">stuff here</span>
 ````
+
+Inline Styles
+-----
+
+Use 
+
+````
+s.
+````
+
+Example:
+````
+[/span s.font-family:Helvetica;/ Helvetica !== Arial]
+````
+
+Classes and IDs
+------
+
+Use the dot and pound notation as in CSS
+
+````
+[/span .ImAClass #ImAnId/ YEAAHHH]
+````
+
