@@ -1,13 +1,14 @@
-// Dependent on jQuery
+// 
+// 
+// EndDiv, the delimiting HTML templater
+// Created by @noahkoch
+// This project is available on the world wide web at github dot com slash noahkoch slash EndDiv
+// 
+// 
 
 var EndDiv = {
-	
-	defaults: {
-		tag : 'div'
-	},
 
 	initialize: function(el){
-		// EndDiv.errorLog();
 		EndDiv.parse(el);
 	},
 
@@ -59,7 +60,7 @@ var EndDiv = {
 			parsedCode = parsedCode.replace(findKey,replaceKey);
 		})
 		
-		console.log('non browser interpreted code \n' + parsedCode);
+		// console.log('non browser interpreted code \n' + parsedCode);
 		return parsedCode;
 
 	},
