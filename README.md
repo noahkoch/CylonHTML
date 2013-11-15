@@ -1,7 +1,7 @@
-EndDiv
+CylonHTML
 ======
 
-The name is temporary. The concept is forever.
+CylonHTML is like a shiny robot cloaked in some sexy HTML.
 
 What?
 -----
