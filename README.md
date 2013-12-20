@@ -32,27 +32,41 @@ which compiles to:
 <span class="stuff">stuff here</span>
 ````
 
-Inline Styles
+Google Web Fonts
 -----
 
 Use 
 
 ````
-s.
+googlefont\Font+Name==
 ````
 
 Example:
 ````
-[/span s.font-family:Helvetica;/ Helvetica !== Arial]
+google\Open+Sans==
 ````
 
-Classes and IDs
-------
+Also supports fontsizes in the font name
 
-Use the dot and pound notation as in CSS
+Stylesheets
+-----
+
+Use 
 
 ````
-[/span .ImAClass #ImAnId/ YEAAHHH]
+style\stylesheetname==
 ````
+
+These are stored in /public/styles
+
+Page Titles
+-----
+
+Use 
+
+````
+Page Name==
+````
+
 
 [Thanks, I'm more of a Dart person](http://github.com/noahkoch/CylonDart)
