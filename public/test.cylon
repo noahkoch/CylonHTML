@@ -1,0 +1,6 @@
+
+[this is a test]
+[ul data-bind="something"\
+	[li\ test 1]
+	[li\ test 2]
+]

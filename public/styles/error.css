@@ -1,0 +1,12 @@
+.container{
+	text-align: center;	
+	font-family: 'Open Sans';
+}
+.remedy{
+	width:400px;
+	margin:auto;
+	background:#999;
+}
+ul{
+	text-align: left;
+}
