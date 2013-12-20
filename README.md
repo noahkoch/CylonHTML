@@ -32,8 +32,8 @@ which compiles to:
 <span class="stuff">stuff here</span>
 ````
 
-Google Web Fonts
------
+#####Google Web Fonts
+
 
 Use 
 
@@ -48,8 +48,7 @@ google\Open+Sans==
 
 Also supports fontsizes in the font name
 
-Stylesheets
------
+#####Stylesheets
 
 Use 
 
@@ -59,8 +58,8 @@ style\stylesheetname==
 
 These are stored in /public/styles
 
-Page Titles
------
+#####Page Titles
+
 
 Use 
 
@@ -68,14 +67,24 @@ Use
 Page Name==
 ````
 
-Adding Pages
------
+#####Adding Pages
 
 All public facing pages to be rendered in the CylonHTML format are located in the public directory. To view the page navigate to 
 ```
 /#/your-page-name
 ```
 notice the exclusion of a file extension. All Cylon files must end in the .cylon extension.
+
+#### Helper Methods
+
+##### link
+You could create a link using the usual ```[a href="/#/decent-page"\link]```. But what are we, cavemen?
+
+```
+[link-sweet-page\SW33T PAGE]
+```
+
+Any thing after the ```link-``` is the title of the file you want to visit.
 
 
 Example Page
