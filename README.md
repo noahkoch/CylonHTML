@@ -24,7 +24,7 @@ Becomes
 ````
 to define specific attributes, you can user
 ````
-[/span class="stuff"/stuff here]
+[span class="stuff"/stuff here]
 ````
 which compiles to:
 
