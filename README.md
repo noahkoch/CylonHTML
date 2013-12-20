@@ -68,5 +68,31 @@ Use
 Page Name==
 ````
 
+Example Page
+-----
+```
+We lost the Pegasus==
+style\error==
+googlefont\Open+Sans==
+
+[class="container"\
+
+	[h1 \Page not found, Starbuck!]
+	[a href="/#/"\Go Home]
+	[img src="lib/adama.jpg"\]
+	[class='this'\We couldn't find the page you were looking for!]
+	[class="remedy"\ 
+		[h3\Let's remdy this issue]
+
+		[ul\
+			[li\Do you have any files under the public directory?]
+			[li\Do your files end in '.cylon'?]
+			[li\Is your computer on?]
+			[li\Do you have an 'index.clyon' file?]
+		]
+	]
+	[h6\This page was created by eating our own dog food.]
+]
+```
 
 [Thanks, I'm more of a Dart person](http://github.com/noahkoch/CylonDart)
