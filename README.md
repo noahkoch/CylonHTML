@@ -68,6 +68,16 @@ Use
 Page Name==
 ````
 
+Adding Pages
+-----
+
+All public facing pages to be rendered in the CylonHTML format are located in the public directory. To view the page navigate to 
+```
+/#/your-page-name
+```
+notice the exclusion of a file extension. All Cylon files must end in the .cylon extension.
+
+
 Example Page
 -----
 ```
