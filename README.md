@@ -75,6 +75,17 @@ All public facing pages to be rendered in the CylonHTML format are located in th
 ```
 notice the exclusion of a file extension. All Cylon files must end in the .cylon extension.
 
+#### Helper Methods
+
+##### link
+You could create a link using the usual ```[a href="/#/decent-page"\link]```. But what are we, cavemen?
+
+```
+[link-sweet-page\SW33T PAGE]
+```
+
+Any thing after the ```link-``` is the title of the file you want to visit.
+
 
 Example Page
 -----
