@@ -5,7 +5,6 @@ googlefont\Open+Sans==
 [class="container"\
 
 	[h1 \Page not found, Starbuck!]
-	[a href="/#/"\Go Home]
 	[img src="lib/adama.jpg"\]
 	[class='this'\We couldn't find the page you were looking for!]
 	[class="remedy"\ 
@@ -19,4 +18,5 @@ googlefont\Open+Sans==
 		]
 	]
 	[h6\This page was created by eating our own dog food.]
+	[a href="/#/"\Go home colonel, you're drunk]
 ]

@@ -1,0 +1,27 @@
+style\cylonstrap==
+Cylonstrap==
+
+[class="topbar"\
+  [class="fill"\
+    [class="container"\
+      [link-index class="brand"\Cylonstrap]
+      [ul class="nav"\[li class="active"\[link-index\Home]][li\[link-index\About]][li\[link-index\Contact]]]	
+      [form action class="pull-right"\[input type="text" class="input-small" placeholder="Username"\][input type="password" class="input-small" placeholder="Password"\][button class="btn" type="submit"\Sign In]
+      ]
+    ]
+  ]
+]
+[class="container"\
+  [class="content"\
+    [class="page-header"\
+      [h1\Page Name[small\Supporting text or tagline]]
+    ]
+    [class="row"\
+      [class="span10"\[h2\Main content]]
+      [class="span4"\[h2\Secondary content]]
+    ]
+  ]
+  [footer\
+    [p\© Company 2011]
+  ]
+]

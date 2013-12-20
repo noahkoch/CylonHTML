@@ -1,4 +1,16 @@
 Cylon Example ==
 style\styles==
-[here]
-[link-error\ERR0r!!1!]
+googlefont\Droid+Sans==
+
+[
+	[h1\CylonHTML]
+	[h3\ Guaranteed to get you babes.]
+	[img src="lib/index.jpg"\]
+]
+[br\]
+[ul\
+	Look at some sample pages:
+	[li\[link-error\Error Page]]
+	[li\[link-cylonstrap\Cylonstrap]]
+
+]
